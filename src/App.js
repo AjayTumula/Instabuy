@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import Login from './components/Login'
 import Signup from './components/Signup';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import ProductGallery from './components/ProductGallery';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
       <Route path="/" element={<Home user={user}/>}/>
       <Route path="/signup" element={<Signup setUser={setUser}/>}/>
       <Route path="/login" element={<Login setUser={setUser}/>}/>
+      <Route path="/products" element={<ProductGallery />}/>
     </Routes>
     </div>
   );

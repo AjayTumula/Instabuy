@@ -21,6 +21,7 @@ function Home({user}) {
     const handleCTAClick = () => {
         if(user) {
             // Navigate to the products page
+            navigate('/products')
         } else {
             navigate('/login')
         }
