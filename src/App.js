@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
+import Logo from './assets/7.png'
+import Home from './components/Home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <Navbar className='navbar'>
+        <Navbar.Brand href="/">
+          <img 
+            alt=""
+            src={Logo}
+            width="30"
+            height="30"
+            className=''
+          />{' '}
+           Instabuy!
+        </Navbar.Brand> 
+        <Navbar.Collapse className="justify-content-end">
+          <Button>Login</Button>
+        </Navbar.Collapse>    
+    </Navbar> 
+    <Home />
     </div>
   );
 }
