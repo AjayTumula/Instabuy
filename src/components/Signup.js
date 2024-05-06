@@ -1,15 +1,17 @@
 import React from "react";
-import LoginImg from '../assets/2.png';
-import {Row, Col, Form, Button} from "react-bootstrap";
+import SignupImg from '../assets/3.png';
+import { Row, Col, Form, Button } from "react-bootstrap";
 
-function Login() {
+
+function Signup() {
+
     return(
         <div style={{backgroundColor: '#216ad9'}}>
-            <Row>
+            <Row style={{padding: 75}}>
                 <Col style={{padding: 100}}>
                     <div>
                         <h1 style={{color: 'white'}}>InstaBuy !</h1>
-                        <h3 style={{color: 'white'}}>One place for all your needs</h3>
+                        <h5 style={{color: 'white', width: '40%', margin: '20px 0 20px 0'}}>One place where brands come together from all across the world</h5>
                         <Form>
                             <div style={{display: 'flex', width: '70%', justifyContent: 'space-between'}}>
                                 <Form.Group style={{width: '49%'}} className="mb-3" controlId="formBasicEmail">                               
@@ -18,22 +20,25 @@ function Login() {
                                 <Form.Group style={{width: '49%'}} className="mb-3" controlId="formBasicPassword">                             
                                     <Form.Control type="password" placeholder="Enter Password" />
                                 </Form.Group> 
-                            </div>                                                   
+                            </div>    
+                            <Form.Group style={{width: '70%'}} className="mb-3" controlId="formBasicPassword">                             
+                                    <Form.Control type="text" placeholder="Enter Full Name" />
+                            </Form.Group>                                               
                             <Button style={{width: '70%', marginBottom: 26, background: '#216ad9', borderWidth: 1, borderColor: 'white'}} outline="outline-light" variant="primary" type="submit">
-                                Start Shopping
+                                Join the Club
                             </Button>
                             <div style={{color: 'white'}}>
-                                Join the club, <a style={{color: 'white'}} href="/signup">click here</a>
+                                Already a member? <a style={{color: 'white'}} href="/login">Click here</a>
                             </div>
                         </Form>
                     </div>
                 </Col>
                 <Col>
-                    <img alt="" src={LoginImg} style={{height: '90vh'}}/>
+                    <img alt="" src={SignupImg} style={{height: '80vh'}}/>
                 </Col>
             </Row>
         </div>
     );
 }
 
-export default Login;
+export default Signup;

@@ -31,12 +31,12 @@ function Home() {
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>
-                                    <img src={CompanyOneImage} style={{height: 50}}/>
-                                    <img src={CompanyTwoImage} style={{height: 50}}/>
-                                    <img src={CompanyThreeImage} style={{height: 50}}/>
-                                    <img src={CompanyFourImage} style={{height: 50}}/>
-                                    <img src={CompanyFiveImage} style={{height: 50}}/>
-                                    <img src={CompanySixImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyOneImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyTwoImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyThreeImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFourImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFiveImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanySixImage} style={{height: 50}}/>
                                 </div>
                             </div>
                         </Col>
@@ -57,12 +57,12 @@ function Home() {
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>
-                                    <img src={CompanyOneImage} style={{height: 50}}/>
-                                    <img src={CompanyTwoImage} style={{height: 50}}/>
-                                    <img src={CompanyThreeImage} style={{height: 50}}/>
-                                    <img src={CompanyFourImage} style={{height: 50}}/>
-                                    <img src={CompanyFiveImage} style={{height: 50}}/>
-                                    <img src={CompanySixImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyOneImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyTwoImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyThreeImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFourImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFiveImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanySixImage} style={{height: 50}}/>
                                 </div>
                             </div>
                         </Col>
@@ -83,12 +83,12 @@ function Home() {
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>
-                                    <img src={CompanyOneImage} style={{height: 50}}/>
-                                    <img src={CompanyTwoImage} style={{height: 50}}/>
-                                    <img src={CompanyThreeImage} style={{height: 50}}/>
-                                    <img src={CompanyFourImage} style={{height: 50}}/>
-                                    <img src={CompanyFiveImage} style={{height: 50}}/>
-                                    <img src={CompanySixImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyOneImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyTwoImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyThreeImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFourImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanyFiveImage} style={{height: 50}}/>
+                                    <img alt="" src={CompanySixImage} style={{height: 50}}/>
                                 </div>
                             </div>
                         </Col>

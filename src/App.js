@@ -4,8 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from './assets/7.png'
 import Home from './components/Home';
 import Login from './components/Login'
+import Signup from './components/Signup';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 function App() {
+
+  const navigate = useNavigate();
+
   return (
     <div>
      <Navbar className='navbar'>
@@ -20,11 +25,14 @@ function App() {
            Instabuy!
         </Navbar.Brand> 
         <Navbar.Collapse className="justify-content-end">
-          <Button>Login</Button>
+          <Button onClick={() => navigate("/login")}>Login</Button>
         </Navbar.Collapse>    
     </Navbar> 
-    {/* <Home /> */}
-    <Login />
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/signup" element={<Signup />}/>
+      <Route path="/login" element={<Login />}/>
+    </Routes>
     </div>
   );
 }
