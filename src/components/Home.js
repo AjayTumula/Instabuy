@@ -1,7 +1,6 @@
 import Carousel  from "react-bootstrap/Carousel";
 import React from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Row, Col} from 'react-bootstrap';
 import CarouselImgOne from '../assets/1.png';
 import CarouselImgTwo from '../assets/4.png';
 import CarouselImgThree from '../assets/5.png';
@@ -12,10 +11,21 @@ import CompanyThreeImage from '../assets/12.png';
 import CompanyFourImage from '../assets/13.png';
 import CompanyFiveImage from '../assets/14.png';
 import CompanySixImage from '../assets/15.png';
+import { useNavigate } from "react-router-dom";
 
 
+function Home({user}) {
 
-function Home() {
+    const navigate = useNavigate(); 
+
+    const handleCTAClick = () => {
+        if(user) {
+            // Navigate to the products page
+        } else {
+            navigate('/login')
+        }
+    }
+
     return(
         <div className="home-container">
             <Carousel>
@@ -27,7 +37,7 @@ function Home() {
                                 <h1 style={{color: '#216ad9', fontWeight: 700}}> <i>STYLE</i></h1>
                                 <h3 style={{marginBottom: '20px'}}>Shop with latest trendy products</h3>
                                 <div style={{marginBottom: '20px'}}>
-                                    <Button style={{width: '250px'}}>Browse Products</Button>
+                                    <Button style={{width: '250px'}} onClick={handleCTAClick}>Browse Products</Button>
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>
@@ -53,7 +63,7 @@ function Home() {
                                 <h1 style={{color: '#216ad9', fontWeight: 700}}> <i>STYLE</i></h1>
                                 <h3 style={{marginBottom: '20px'}}>Shop with latest trendy products</h3>
                                 <div style={{marginBottom: '20px'}}>
-                                    <Button style={{width: '250px'}}>Browse Products</Button>
+                                    <Button style={{width: '250px'}} onClick={handleCTAClick}>Browse Products</Button>
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>
@@ -79,7 +89,7 @@ function Home() {
                                 <h1 style={{color: '#216ad9', fontWeight: 700}}> <i>STYLE</i></h1>
                                 <h3 style={{marginBottom: '20px'}}>Shop with latest trendy products</h3>
                                 <div style={{marginBottom: '20px'}}>
-                                    <Button style={{width: '250px'}}>Browse Products</Button>
+                                    <Button style={{width: '250px'}} onClick={handleCTAClick}>Browse Products</Button>
                                 </div>
                                 <div>
                                     <h4>Products available from:</h4>

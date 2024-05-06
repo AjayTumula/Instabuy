@@ -3,13 +3,22 @@ import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from './assets/7.png'
 import Home from './components/Home';
+import { useState, useEffect } from 'react';
 import Login from './components/Login'
 import Signup from './components/Signup';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 function App() {
 
   const navigate = useNavigate();
+  const[user, setUser] = useState('');
+
+  useEffect(()=> {
+    const userEmail = localStorage.getItem('userEmail');
+    if(userEmail) {
+      setUser(userEmail);
+    }
+  }, [])
 
   return (
     <div>
@@ -25,13 +34,13 @@ function App() {
            Instabuy!
         </Navbar.Brand> 
         <Navbar.Collapse className="justify-content-end">
-          <Button onClick={() => navigate("/login")}>Login</Button>
+          <Button onClick={() => navigate("/login")}>{user ? 'Logout' : 'Login'}</Button>
         </Navbar.Collapse>    
     </Navbar> 
     <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/signup" element={<Signup />}/>
-      <Route path="/login" element={<Login />}/>
+      <Route path="/" element={<Home user={user}/>}/>
+      <Route path="/signup" element={<Signup setUser={setUser}/>}/>
+      <Route path="/login" element={<Login setUser={setUser}/>}/>
     </Routes>
     </div>
   );
