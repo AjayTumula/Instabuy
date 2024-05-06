@@ -16,7 +16,6 @@ import CompanySixImage from '../assets/15.png';
 
 
 function Home() {
-
     return(
         <div className="home-container">
             <Carousel>
