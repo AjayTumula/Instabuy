@@ -3,7 +3,8 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from './assets/7.png'
-import Home from './components/Home'
+import Home from './components/Home';
+import Login from './components/Login'
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
           <Button>Login</Button>
         </Navbar.Collapse>    
     </Navbar> 
-    <Home />
+    {/* <Home /> */}
+    <Login />
     </div>
   );
 }
