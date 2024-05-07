@@ -8,6 +8,7 @@ import Login from './components/Login'
 import Signup from './components/Signup';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import ProductGallery from './components/ProductGallery';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/signup" element={<Signup setUser={setUser}/>}/>
       <Route path="/login" element={<Login setUser={setUser}/>}/>
       <Route path="/products" element={<ProductGallery />}/>
+      <Route path="/product/:id" element={<ProductDetails />}/>
     </Routes>
     </div>
   );
