@@ -9,18 +9,24 @@ import Signup from './components/Signup';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import ProductGallery from './components/ProductGallery';
 import ProductDetails from './components/ProductDetails';
+import Cart from './components/Cart';
 
 function App() {
 
   const navigate = useNavigate();
   const[user, setUser] = useState('');
+  const[cartItems, setCartItems] = useState({});
 
   useEffect(()=> {
     const userEmail = localStorage.getItem('userEmail');
     if(userEmail) {
       setUser(userEmail);
     }
-  }, [])
+  }, []);
+
+  const handleAddToCart = (item) => {
+    setCartItems({...cartItems, ...item})
+  }
 
   return (
     <div>
@@ -44,7 +50,8 @@ function App() {
       <Route path="/signup" element={<Signup setUser={setUser}/>}/>
       <Route path="/login" element={<Login setUser={setUser}/>}/>
       <Route path="/products" element={<ProductGallery />}/>
-      <Route path="/product/:id" element={<ProductDetails />}/>
+      <Route path="/product/:id" element={<ProductDetails handleAddToCart={handleAddToCart} cartItems={cartItems}/>}/>
+      <Route path="/cart" element={<Cart cartItems={cartItems} />}/>
     </Routes>
     </div>
   );
