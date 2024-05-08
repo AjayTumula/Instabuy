@@ -44,8 +44,7 @@ function ProductDetails({cartItems, handleAddToCart}) {
                             handleAddToCart({[id]: {title, price, quantity: currentItem.quantity + 1}})
                         } else {
                             handleAddToCart({[id]: {title, price, quantity: 1}})
-                        }
-                        navigate('/cart');
+                        }                      
                     }} >Add to cart</Button>
                 </div>
             </Col>
@@ -63,8 +62,7 @@ function ProductDetails({cartItems, handleAddToCart}) {
                         </Card>
                     )
                 })}                 
-                </div>
-               
+                </div>              
             </Col>
            </Row>
         </div>

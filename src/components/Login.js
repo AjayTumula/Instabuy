@@ -33,7 +33,7 @@ function Login({setUser}) {
                                 Start Shopping
                             </Button>
                             <div style={{color: 'white'}}>
-                                Join the club, <a style={{color: 'white'}} href="/signup">click here</a>
+                                Join the club, <a style={{color: 'white'}} onClick={() => navigate('/singup')}>click here</a>
                             </div>
                         </Form>
                     </div>

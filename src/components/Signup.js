@@ -37,7 +37,7 @@ function Signup({setUser}) {
                                 Join the Club
                             </Button>
                             <div style={{color: 'white'}}>
-                                Already a member? <a style={{color: 'white'}} href="/login">Click here</a>
+                                Already a member? <a style={{color: 'white'}} onClick={() => navigate('/login')}>Click here</a>
                             </div>
                         </Form>
                     </div>

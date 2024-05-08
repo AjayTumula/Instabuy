@@ -24,7 +24,7 @@ function ProductGallery() {
                {products.map((product) => {
                 return(
                     <Card key={product.id} style={{width: '18rem', border: 'none', margin: 10}}>
-                        <Card.Img src={product.images[1]} />
+                        <Card.Img src={product.images[0]} />
                         <Card.Title>{product.title}</Card.Title>
                         <Card.Text>$ {product.price}</Card.Text>
                         <Button onClick={() => navigate(`/product/${product.id}`, {state: product})} style={{width: 120}}>View item</Button>
